@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="criarBox()">Criar caixa</button>
+    <div id="app"></div>
+    <script>
+        function criarBox() {
+
+            var divBox = document.createElement('div');
+            divBox.setAttribute('class', 'box');
+            divBox.style.float = 'left';
+            divBox.style.width = '100px';
+            divBox.style.height = '100px';
+            divBox.style.backgroundColor = '#f00';
+
+            var criarElemento = document.querySelector('#app');
+            criarElemento.appendChild(divBox);
+
+        }
+    </script>
+</body>
+
+</html>

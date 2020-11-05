@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul id="lista">
+        </ul>
+    </div>
+    <script>
+        //criando a lista a ser exibida
+        var names = ["Diego", "Gabriel", "Lucas"];
+
+        //função para preencher a lista
+        function preencherList() {
+            names.forEach(name => {
+                var list = document.createElement('li');
+                list.setAttribute('class', 'listContent');
+                list.textContent = name;
+                var criarLista = document.querySelector('#lista');
+                criarLista.appendChild(list);
+            });
+        }
+        preencherList();
+    </script>
+</body>
+
+</html>

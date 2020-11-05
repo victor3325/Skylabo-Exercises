@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input id="nome" type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+        <ul id="lista">
+        </ul>
+    </div>
+    <script>
+        //criando a lista a ser exibida
+        var names = [];
+
+
+        //função para preencher a lista
+        function preencherList() {
+            var list = document.createElement('li');
+            list.setAttribute('class', 'listContent');
+            //percorrendo o vetor e definindo o conteudo da lista
+            names.forEach(name => {
+                list.textContent = name;
+                var criarLista = document.querySelector('#lista');
+                criarLista.appendChild(list);
+            });
+
+        }
+
+
+
+        function adicionar() {
+
+            var nome = document.getElementById('nome').value;
+            names.push(nome);
+            preencherList();
+            console.log(names);
+
+        }
+    </script>
+</body>
+
+</html>

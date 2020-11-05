@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function experiencia(anos) {
+            var titulo;
+            if (anosEstudo <= 1) {
+                titulo = "Iniciante"
+            } else if (anosEstudo > 1 && anosEstudo <= 3) {
+                titulo = "Intermediário"
+            } else if (anosEstudo > 3 && anosEstudo <= 6) {
+                titulo = "Avançado"
+            } else if (anosEstudo >= 7) {
+                titulo = "Jedi Master"
+            }
+            return titulo;
+        }
+        var anosEstudo = 7;
+        var resultado = experiencia(anosEstudo);
+        console.log(resultado);
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+    </script>
+</body>
+
+</html>

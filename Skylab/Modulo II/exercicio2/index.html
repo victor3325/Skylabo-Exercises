@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="criarBox()">Criar caixa</button>
+    <div id="app"></div>
+    <script>
+        function criarBox() {
+
+            var divBox = document.createElement('div');
+            divBox.setAttribute('class', 'box');
+            divBox.style.float = 'left';
+            divBox.style.width = '100px';
+            divBox.style.height = '100px';
+            divBox.style.backgroundColor = '#f00';
+
+            divBox.onmouseover = function() {
+                divBox.style.backgroundColor = getRandomColor();
+            }
+
+            var criarElemento = document.querySelector('#app');
+            criarElemento.appendChild(divBox);
+
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+
+        }
+
+        var newColor = getRandomColor(); // #E943F0
+        console.log(newColor);
+    </script>
+</body>
+
+</html>
